@@ -1,0 +1,67 @@
+@import "variables";
+
+%Header-Styling {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $header-BackgroundColor;
+
+  h1 {
+    color: $headerLinks-Color;
+    font-size: 1.8rem;
+    font-family: "Yuji Mai", serif;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5625rem;
+      #active {
+        border-bottom: 0.125rem solid $headerActive_Color;
+      }
+      li {
+        transition: 0.3s;
+        &:hover {
+          border-bottom: 0.125rem solid $header-linksHoversColor;
+        }
+        a {
+          display: flex;
+          text-decoration: none;
+          font-size: 1rem;
+          color: $headerLinks-Color;
+          margin-bottom: 0.2rem;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.1);
+            color: $header-linksHoversColor;
+          }
+        }
+      }
+    }
+    #header-line {
+      border: 0.015rem solid $headerLinks-Color;
+    }
+    #register {
+      i {
+        color: $header-iconColor;
+        font-size: 1.2rem;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          color: $headerLinks-Color;
+        }
+      }
+    }
+  }
+}

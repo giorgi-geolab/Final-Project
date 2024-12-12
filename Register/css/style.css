@@ -187,4 +187,11 @@ header nav #register i {
 header nav #register i:hover {
   transform: scale(1.1);
   color: #ffffff;
+}
+
+header nav #register {
+  border-bottom: 0.125rem solid #d4a373;
+}
+header nav #register i {
+  margin-bottom: 0.2rem;
 }/*# sourceMappingURL=style.css.map */

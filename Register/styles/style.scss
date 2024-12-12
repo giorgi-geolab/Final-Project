@@ -4,4 +4,12 @@
 
 header {
   @extend %Header-Styling;
+  nav {
+    #register {
+      border-bottom: 0.125rem solid $headerActive_Color;
+      i {
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
 }
