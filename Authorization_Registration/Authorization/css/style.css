@@ -423,6 +423,160 @@ footer .footer-section2 img {
   }
 }
 
+header nav #authorization {
+  border-bottom: 0.125rem solid #d4a373;
+}
+header nav #authorization i {
+  margin-bottom: 0.2rem;
+  color: #a5a5a5;
+}
+
 main {
-  height: 100vh;
+  background-image: url(../../images/background.avif);
+  width: 100%;
+  height: 50rem;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main {
+  position: absolute;
+  top: calc(50% - 16rem);
+  left: calc(50% - 14rem);
+  width: 28rem;
+  height: 35rem;
+  background-color: rgba(0, 36, 41, 0.6862745098);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+main .main img {
+  width: 8rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 1.8rem;
+}
+main .main form {
+  width: 19rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+main .main form h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Yuji Mai", serif;
+}
+main .main form .section-inputEP {
+  display: flex;
+  align-items: center;
+  background-color: #003941;
+  padding: 1rem 0 1rem 1.5rem;
+  border-radius: 2rem;
+}
+main .main form .section-inputEP:nth-child(2) {
+  margin-top: 2.2rem;
+}
+main .main form .section-inputEP:nth-child(3) {
+  margin-top: 1.5rem;
+}
+main .main form .section-inputEP:nth-child(3) #pass {
+  width: 70%;
+}
+main .main form .section-inputEP:nth-child(3) #eye {
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+main .main form .section-inputEP input {
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: rgb(194, 194, 194);
+  width: 75%;
+  border-bottom: 0.14rem solid rgb(179, 179, 179);
+}
+main .main form .section-inputEP input:focus {
+  outline: none;
+  border-bottom: 0.14rem solid white;
+}
+main .main form .section-inputEP i {
+  color: rgb(143, 143, 143);
+}
+main .main form .section-inputRF {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+main .main form .section-inputRF input {
+  background: black;
+  width: 0.8rem;
+  height: 0.8rem;
+  accent-color: #47a94a;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+main .main form .section-inputRF label {
+  color: rgb(159, 159, 159);
+  margin-left: 0.7rem;
+  font-size: 1.09rem;
+}
+main .main form button {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  margin-top: 1.7rem;
+  background-color: rgba(44, 148, 48, 0.7019607843);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .main form h5 {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(199, 199, 199);
+}
+main .main form a {
+  display: inline-flex;
+  margin-left: 0.2rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(237, 237, 237);
+}
+
+@media only screen and (max-height: 44rem) {
+  main {
+    height: 45rem;
+  }
+  main .main {
+    top: 7.5rem;
+  }
+}
+@media only screen and (max-width: 36.25rem) {
+  main .main {
+    left: calc(50% - 12.5rem);
+    width: 25rem;
+  }
+}
+@media only screen and (max-width: 28.125rem) {
+  main {
+    height: 45rem;
+  }
+  main .main {
+    width: 22rem;
+    top: 7.5rem;
+    left: calc(50% - 11rem);
+    scale: 0.9;
+  }
 }/*# sourceMappingURL=style.css.map */

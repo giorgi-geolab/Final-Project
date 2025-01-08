@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" type="image/png" href="../Common-images/logo.png" />
+    <link rel="icon" type="image/png" href="../../Common-images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,33 +19,54 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <title>News</title>
+    <title>ავტორიზაცია</title>
   </head>
   <body>
     <header>
       <h1>School Clubs</h1>
       <nav>
         <ul id="nav-links-ul">
-          <li><a href="../Main/index.html">Home</a></li>
-          <li><a href="../About us/index.html">About Us</a></li>
-          <li id="active"><a href="../News/index.html">News</a></li>
-          <li><a href="../Services/index.html">Services</a></li>
-          <li><a href="../Contact/index.html">Contact</a></li>
+          <li><a href="../../Main/index.html">Home</a></li>
+          <li><a href="../../About us/index.html">About Us</a></li>
+          <li><a href="../../News/index.html">News</a></li>
+          <li><a href="../../Services/index.html">Services</a></li>
+          <li><a href="../../Contact/index.html">Contact</a></li>
         </ul>
 
         <div class="burger-menu-div"><i class="fa fa-bars"></i></div>
 
         <div id="header-line"></div>
 
-        <a
-          id="authorization"
-          href="../Authorization_Registration/Authorization/index.html"
+        <a id="authorization" href="../Authorization/index.html"
           ><i class="fas fa-user"></i
         ></a>
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <div class="main">
+        <img src="../../Common-images/logo.png" />
+        <form>
+          <h1>LOGIN</h1>
+          <section class="section-inputEP">
+            <i class="fas fa-user"></i>
+            <input type="email" placeholder="Email@example.com" required />
+          </section>
+          <section class="section-inputEP">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password" id="pass" required />
+            <i class="fa-solid fa-eye-slash" id="eye"></i>
+          </section>
+          <section class="section-inputRF">
+            <input type="checkbox" />
+            <label>Remember me</label>
+          </section>
+          <button>Sign in</button>
+          <h5>Dont't have an account?</h5>
+          <a href="../Registration/index.html">Register</a>
+        </form>
+      </div>
+    </main>
 
     <footer>
       <section class="footer-section1">
@@ -58,7 +79,7 @@
             </h5>
             <h5>- Do you have any questions?</h5>
 
-            <h5><a href="../Contact/index.html">Contact Us</a></h5>
+            <h5><a href="../../Contact/index.html">Contact Us</a></h5>
           </div>
           <div>
             <h1>Contact the Publisher</h1>
@@ -88,7 +109,7 @@
       <section class="footer-section2">
         <h1>2024 | By Giorgi Tsimakuridze</h1>
         <a href="https://www.tbceducation.ge/" target="_blank"
-          ><img src="../Common-images/tbc-logo.png"
+          ><img src="../../Common-images/tbc-logo.png"
         /></a>
       </section>
     </footer>
@@ -104,6 +125,7 @@
       >
     </div>
 
-    <script src="../Common-JS/script.js"></script>
+    <script src="../../Common-JS/script.js"></script>
+    <script src="./JavaScript/script.js"></script>
   </body>
 </html>

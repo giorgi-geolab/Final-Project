@@ -5,3 +5,23 @@
 header {
   @extend %Header-Styling;
 }
+
+
+
+main{
+  height: 100vh
+}
+
+footer {
+  @extend %Footer-Styling;
+}
+
+.after--lowPXS {
+  @extend %after-LowPXS;
+}
+
+/// RESPONSIVE ///
+
+body {
+  @extend %Header-Footer-media;
+}

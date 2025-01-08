@@ -131,16 +131,18 @@ table {
 
 header {
   width: 100vw;
-  height: 5rem;
+  height: 5.5rem;
   position: fixed;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.788);
+  opacity: 0.9;
 }
 header h1 {
   color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-family: "Yuji Mai", serif;
   cursor: pointer;
 }
@@ -149,42 +151,278 @@ header nav {
   flex-direction: row;
   gap: 1.5rem;
 }
-header nav ul {
+header nav #nav-links-ul {
   display: flex;
   flex-direction: row;
   gap: 1.5625rem;
 }
-header nav ul #active {
+header nav #nav-links-ul #active {
   border-bottom: 0.125rem solid #d4a373;
 }
-header nav ul li {
+header nav #nav-links-ul #active a {
+  color: #a5a5a5;
+}
+header nav #nav-links-ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
   transition: 0.3s;
 }
-header nav ul li:hover {
-  border-bottom: 0.125rem solid rgb(199, 199, 199);
+header nav #nav-links-ul li:hover {
+  border-bottom: 0.125rem solid #b9b9b9;
 }
-header nav ul li a {
+header nav #nav-links-ul li a {
   display: flex;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ffffff;
-  margin-bottom: 0.2rem;
+  transition: 0.2s;
+}
+header nav #nav-links-ul li a:hover {
+  transform: scale(1.05);
+  color: #b9b9b9;
+}
+header nav .burger-menu-div {
+  display: none;
+  align-items: center;
+}
+header nav .burger-menu-div .fa-bars {
+  font-size: 1.5rem;
+  color: rgb(222, 222, 222);
+  cursor: pointer;
   transition: 0.3s;
 }
-header nav ul li a:hover {
+header nav .burger-menu-div .fa-bars:hover {
   transform: scale(1.1);
-  color: rgb(199, 199, 199);
+  color: #ffffff;
 }
 header nav #header-line {
   border: 0.015rem solid #ffffff;
 }
-header nav #register i {
+header nav #authorization i {
   color: rgb(136, 136, 136);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: 0.3s;
   cursor: pointer;
 }
-header nav #register i:hover {
+header nav #authorization i:hover {
   transform: scale(1.1);
   color: #ffffff;
+}
+
+footer .footer-section1 {
+  width: 100%;
+  min-height: 17rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #0b0d0e;
+  padding: 4rem 0 4rem;
+  box-sizing: border-box;
+}
+footer .footer-section1-right, footer .footer-section1-left {
+  width: 34.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .footer-section1-right div, footer .footer-section1-left div {
+  width: 14rem;
+}
+footer .footer-section1-right div h1, footer .footer-section1-left div h1 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-size: 1.3rem;
+  line-height: 1.563rem;
+  font-family: "Lora", serif;
+  color: #ffffff;
+}
+footer .footer-section1-right div h5, footer .footer-section1-left div h5 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 0.96rem;
+  color: #c0c0c0;
+  margin-top: 1.1rem;
+}
+footer .footer-section1-right div h5:nth-child(3), footer .footer-section1-left div h5:nth-child(3) {
+  margin-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid grey;
+}
+footer .footer-section1-right div h5:nth-child(4), footer .footer-section1-left div h5:nth-child(4) {
+  margin-top: 0.7rem;
+}
+footer .footer-section1-right div h5 a, footer .footer-section1-left div h5 a {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.96rem;
+  color: #00adee;
+  font-size: 1rem;
+}
+footer .footer-section1-right div .footer-icons-div, footer .footer-section1-left div .footer-icons-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid grey;
+}
+footer .footer-section1-right div .footer-icons-div i, footer .footer-section1-left div .footer-icons-div i {
+  color: white;
+  font-size: 20px;
+}
+footer .footer-section1-left {
+  width: 39.375rem;
+}
+footer .footer-section1-left div:nth-child(1) {
+  width: 18.75rem;
+  box-sizing: border-box;
+}
+footer .footer-section2 {
+  width: 100%;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #15181a;
+  padding: 0 2.25rem;
+  box-sizing: border-box;
+}
+footer .footer-section2 h1 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.92px;
+  color: #e5e5e5;
+}
+footer .footer-section2 img {
+  width: 2.5rem;
+}
+
+.after--lowPXS {
+  display: none;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
+.after--lowPXS .after--lowPXS__txt {
+  color: red;
+  text-transform: uppercase;
+}
+.after--lowPXS .after--lowPXS__txt:nth-child(1) {
+  font-size: 35px;
+}
+.after--lowPXS a {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: 0.8s;
+}
+.after--lowPXS a:hover {
+  font-size: 25px;
+  color: aquamarine;
+}
+
+@media only screen and (max-width: 60rem) {
+  body header .burger-menu-div {
+    display: flex;
+  }
+  body header .burger-menu-div .fa-bars.active {
+    transform: rotate(180deg);
+  }
+  body header #nav-links-ul {
+    position: fixed;
+    left: -100%;
+    top: 5.5rem;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.788);
+    width: 100%;
+    transition: 0.3s;
+  }
+  body header #nav-links-ul #active {
+    padding-bottom: 0.5rem;
+  }
+  body header #nav-links-ul li {
+    margin: 0.8rem 0;
+    justify-content: center;
+  }
+  body header #nav-links-ul.active {
+    left: 0;
+  }
+}
+@media only screen and (max-width: 87.5rem) and (min-width: 70.938rem) {
+  body footer .footer-section1-right, body footer .footer-section1-left {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 70.938rem) {
+  body footer .footer-section1 {
+    justify-content: space-between;
+  }
+  body footer .footer-section1-right, body footer .footer-section1-left {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  body footer .footer-section1-right div:nth-child(2), body footer .footer-section1-left div:nth-child(2) {
+    margin-top: 1.3rem;
+  }
+  body footer .footer-section1-left div {
+    width: 18.75rem;
+  }
+  body footer .footer-section1-left div:nth-child(1) h5 {
+    padding-bottom: 0;
+    border: none;
+  }
+  body footer .footer-section1-left div:nth-child(1) h5:nth-child(4) {
+    border-bottom: 2px solid grey;
+    padding-bottom: 0.8rem;
+  }
+}
+@media only screen and (max-width: 43.75rem) {
+  body footer .footer-section1 {
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .footer-section1-right {
+    margin-top: 1.3rem;
+  }
+  body footer .footer-section1-right div {
+    width: 18.75rem;
+  }
+}
+@media only screen and (max-width: 28.125rem) {
+  body header h1 {
+    scale: 0.9;
+  }
+  body header div {
+    scale: 0.95;
+  }
+  body header i {
+    scale: 0.9;
+  }
+}
+@media only screen and (max-width: 21.25rem) {
+  body header {
+    display: none;
+  }
+  body main {
+    display: none;
+  }
+  body footer {
+    display: none;
+  }
+  body {
+    background-color: black;
+  }
+  body .after--lowPXS {
+    display: flex;
+  }
+}
+
+main {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

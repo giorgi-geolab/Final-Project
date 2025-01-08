@@ -1,0 +1,186 @@
+@import "../../../Scss-helpers/resetstyles";
+@import "../../../Scss-helpers/variables";
+@import "../../../Scss-helpers/placeholder";
+
+header {
+  @extend %Header-Styling;
+  nav {
+    #authorization {
+      border-bottom: 0.125rem solid $headerActive_Color;
+      i {
+        margin-bottom: 0.2rem;
+        color: $header-ActiveLink-Color;
+      }
+    }
+  }
+}
+
+main {
+  background-image: url(../../images/background.avif);
+  width: 100%;
+  height: 50rem;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  .main {
+    position: absolute;
+    top: calc(50% - 16rem);
+    left: calc(50% - 14rem);
+    width: 28rem;
+    height: 35rem;
+    background-color: $register-MainBackground-Color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    img {
+      width: 8rem;
+      height: 7rem;
+      object-fit: cover;
+      margin-top: 1.8rem;
+    }
+    form {
+      width: 19rem;
+      margin-top: 1rem;
+      text-align: center;
+
+      h1 {
+        color: #ffffff;
+        font-size: 3rem;
+        font-family: "Yuji Mai", serif;
+      }
+      .section-inputEP {
+        display: flex;
+        align-items: center;
+        background-color: $register-MainInputSection-Color;
+        padding: 1rem 0 1rem 1.5rem;
+        border-radius: 2rem;
+        &:nth-child(2) {
+          margin-top: 2.2rem;
+        }
+        &:nth-child(3) {
+          margin-top: 1.5rem;
+
+          #pass {
+            width: 70%;
+          }
+
+          #eye {
+            margin-left: 0.8rem;
+            cursor: pointer;
+          }
+        }
+        input {
+          background: none;
+          border: none;
+          margin-left: 1rem;
+          font-size: 1rem;
+          color: rgb(194, 194, 194);
+          width: 75%;
+          border-bottom: 0.14rem solid rgb(179, 179, 179);
+
+          &:focus {
+            outline: none;
+            border-bottom: 0.14rem solid white;
+          }
+        }
+        i {
+          color: rgb(143, 143, 143);
+        }
+      }
+      .section-inputRF {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        input {
+          background: black;
+          width: 0.8rem;
+          height: 0.8rem;
+          accent-color: #47a94a;
+          cursor: pointer;
+          margin-left: 1.5rem;
+        }
+        label {
+          color: rgb(159, 159, 159);
+          margin-left: 0.7rem;
+          font-size: 1.09rem;
+        }
+      }
+      button {
+        height: 3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        margin-top: 1.7rem;
+        background-color: #2c9430b3;
+        color: white;
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      h5 {
+        display: inline-flex;
+        margin-top: 1.4rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: rgb(199, 199, 199);
+      }
+      a {
+        display: inline-flex;
+        margin-left: 0.2rem;
+        font-size: 1.12rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: rgb(237, 237, 237);
+      }
+    }
+  }
+}
+
+footer {
+  @extend %Footer-Styling;
+}
+
+.after--lowPXS {
+  @extend %after-LowPXS;
+}
+
+/// RESPONSIVE ///
+
+body {
+  @extend %Header-Footer-media;
+}
+
+@media only screen and (max-height: 44rem) {
+  main {
+    height: 45rem;
+    .main {
+      top: 7.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 36.25rem) {
+  main {
+    .main {
+      left: calc(50% - 12.5rem);
+      width: 25rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 28.125rem) {
+  main {
+    height: 45rem;
+    .main {
+      width: 22rem;
+      top: 7.5rem;
+      left: calc(50% - 11rem);
+      scale: 0.9;
+    }
+  }
+}
