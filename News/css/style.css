@@ -260,6 +260,9 @@ footer .footer-section1-right div h5 a, footer .footer-section1-left div h5 a {
   color: #00adee;
   font-size: 1rem;
 }
+footer .footer-section1-right div h5 a:hover, footer .footer-section1-left div h5 a:hover {
+  color: #19c2ff;
+}
 footer .footer-section1-right div .footer-icons-div, footer .footer-section1-left div .footer-icons-div {
   display: flex;
   justify-content: space-between;

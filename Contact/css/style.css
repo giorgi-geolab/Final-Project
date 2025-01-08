@@ -260,6 +260,9 @@ footer .footer-section1-right div h5 a, footer .footer-section1-left div h5 a {
   color: #00adee;
   font-size: 1rem;
 }
+footer .footer-section1-right div h5 a:hover, footer .footer-section1-left div h5 a:hover {
+  color: #19c2ff;
+}
 footer .footer-section1-right div .footer-icons-div, footer .footer-section1-left div .footer-icons-div {
   display: flex;
   justify-content: space-between;
@@ -471,6 +474,7 @@ main .main-section1 h5 span {
 main .main-section2 iframe {
   width: 60vw;
   height: 60vh;
+  box-shadow: 10px 1px 30px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 81.25rem) {

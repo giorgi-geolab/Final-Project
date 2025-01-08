@@ -7,7 +7,141 @@ header {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
+  .main-section1 {
+    position: relative;
+    img {
+      min-width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+    div {
+      width: 40rem;
+      position: absolute;
+      top: 25vh;
+      left: calc(50% - 20rem);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      h1 {
+        font-family: "Lora", serif;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 46.08px;
+        color: #ffffff;
+      }
+      h6 {
+        font-family: "Lora", serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 20px;
+        color: #e5e5e5;
+      }
+      h2 {
+        a {
+          font-family: "Lora", serif;
+          font-weight: 700;
+          font-size: 1.25rem;
+          line-height: 20px;
+          transition: 0.5s;
+          color: #f3f3f3;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            color: #9b9b9b;
+            font-size: 1.313rem;
+          }
+        }
+      }
+    }
+  }
+  .main-section2 {
+    padding: 4rem 5rem;
+    align-items: center;
+    &-div1 {
+      h1 {
+        font-family: "Lora", serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 46.08px;
+      }
+      h5 {
+        font-family: "Lora", serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 25px;
+        color: #495057;
+        margin-top: 0.6rem;
+        span {
+          display: block;
+          font-weight: bold;
+        }
+      }
+    }
+    &-div2 {
+      margin-top: 0.8rem;
+      h1 {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 46.08px;
+      }
+      ul {
+        font-family: "Lora", serif;
+        list-style-type: disc;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-top: 0.6rem;
+        li {
+          font-size: 1rem;
+          line-height: 1.3rem;
+          span {
+            a {
+              font-family: "Lora", serif;
+              font-weight: bolder;
+              text-decoration: none;
+              color: rgb(0, 0, 0);
+              &:hover {
+                color: rgb(109, 109, 109);
+              }
+            }
+          }
+        }
+      }
+    }
+    &-div3 {
+      margin-top: 1rem;
+      h1 {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 46.08px;
+      }
+      .main-section2-div3-div1 {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        margin-top: 0.25rem;
+        h1 {
+          font-size: 2.625rem;
+        }
+        .main-section2-div3-div2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          div {
+            color: green;
+            display: flex;
+            flex-direction: row;
+            gap: 0.7rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -22,4 +156,56 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+}
+
+@media only screen and (max-width: 42rem) {
+  main {
+    .main-section1 {
+      div {
+        scale: 0.8;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 33.75rem) {
+  main {
+    .main-section1 {
+      img {
+        height: 40vh;
+      }
+      div {
+        top: 17vh;
+        scale: 0.6;
+      }
+    }
+    .main-section2 {
+      padding: 2rem 3rem;
+      .main-section2-div1 {
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+      div {
+        h1 {
+          font-size: 1.5rem;
+        }
+        h5 {
+          font-size: 0.9rem;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 25rem) {
+  main {
+    .main-section1 {
+      div {
+        top: 17vh;
+        scale: 0.5;
+      }
+    }
+  }
 }
