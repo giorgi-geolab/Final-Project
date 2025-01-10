@@ -199,6 +199,8 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  animation: fadeIn 1s ease;
+  @extend %keyframe-fadeIn;
 }
 
 @media only screen and (max-width: 36.25rem) {

@@ -140,11 +140,12 @@ header {
   background-color: rgba(0, 0, 0, 0.788);
   opacity: 0.9;
 }
-header h1 {
+header h1 a {
   color: #ffffff;
   font-size: 2.1rem;
   font-family: "Yuji Mai", serif;
   cursor: pointer;
+  text-decoration: none;
 }
 header nav {
   display: flex;
@@ -302,6 +303,17 @@ footer .footer-section2 img {
   width: 2.5rem;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .after--lowPXS {
   display: none;
   text-align: center;
@@ -437,6 +449,7 @@ main .main-section1 img {
   height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 0 5px 20px black;
 }
 main .main-section1 div {
   width: 40rem;
@@ -486,7 +499,7 @@ main .main-section2-div1 h1 {
   font-weight: 700;
   line-height: 46.08px;
 }
-main .main-section2-div1 h5 {
+main .main-section2-div1 p {
   font-family: "Lora", serif;
   font-weight: 400;
   font-size: 1rem;
@@ -494,7 +507,7 @@ main .main-section2-div1 h5 {
   color: #495057;
   margin-top: 0.6rem;
 }
-main .main-section2-div1 h5 span {
+main .main-section2-div1 p span {
   display: block;
   font-weight: bold;
 }
@@ -553,10 +566,14 @@ main .main-section2-div3 .main-section2-div3-div1 .main-section2-div3-div2 {
   justify-content: space-around;
 }
 main .main-section2-div3 .main-section2-div3-div1 .main-section2-div3-div2 div {
-  color: green;
+  color: rgb(0, 196, 0);
   display: flex;
   flex-direction: row;
   gap: 0.7rem;
+}
+
+body {
+  animation: fadeIn 1s ease;
 }
 
 @media only screen and (max-width: 42rem) {

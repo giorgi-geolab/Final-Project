@@ -140,11 +140,12 @@ header {
   background-color: rgba(0, 0, 0, 0.788);
   opacity: 0.9;
 }
-header h1 {
+header h1 a {
   color: #ffffff;
   font-size: 2.1rem;
   font-family: "Yuji Mai", serif;
   cursor: pointer;
+  text-decoration: none;
 }
 header nav {
   display: flex;
@@ -300,6 +301,17 @@ footer .footer-section2 h1 {
 }
 footer .footer-section2 img {
   width: 2.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .after--lowPXS {
@@ -600,6 +612,10 @@ main .main form a {
   font-weight: 700;
   text-decoration: none;
   color: rgb(237, 237, 237);
+}
+
+body {
+  animation: fadeIn 1s ease;
 }
 
 @media only screen and (max-width: 36.25rem) {

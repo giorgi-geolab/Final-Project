@@ -6,10 +6,141 @@ header {
   @extend %Header-Styling;
 }
 
+main {
+  min-height: 100vh;
+  .main-section1 {
+    position: relative;
+    img {
+      min-width: 100%;
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      box-shadow: 0 5px 20px black;
+    }
+    div {
+      min-width: 70vw;
+      position: absolute;
+      top: 32vh;
+      right: 5%;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      gap: 1.2rem;
+      h3 {
+        font-family: "Lora", serif;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 20px;
+        color: #e5e5e5;
+      }
+      h1 {
+        font-family: "Lora", serif;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 46.08px;
+        color: #ffffff;
+      }
+      h2 {
+        a {
+          font-family: "Lora", serif;
+          font-weight: 700;
+          font-size: 1.25rem;
+          line-height: 20px;
+          transition: 0.5s;
+          color: #f3f3f3;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            color: #9b9b9b;
+            font-size: 1.313rem;
+          }
+        }
+      }
+    }
+  }
+  .main-section2 {
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
 
+    #main-section2-firstSentence {
+      font-family: "Lora", serif;
+      font-weight: 600;
+      font-size: 2.1rem;
+      line-height: 46.08px;
+      color: #000000;
+    }
+    .main-section2-div1 {
+      margin-top: 2.5rem;
+      h1 {
+        font-family: "Lora", serif;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 35px;
+        color: rgb(0, 0, 96);
+      }
+      div {
+        max-width: 30rem;
+        margin-top: 0.7rem;
+        display: flex;
+        align-items: center;
 
-main{
-  height: 100vh
+        img {
+          width: 3rem;
+          height: 3rem;
+          object-fit: cover;
+          border-radius: 50%;
+          flex-shrink: 0;
+          box-shadow: 0 5px 15px black;
+        }
+
+        p {
+          font-family: "Lora", serif;
+          font-weight: 400;
+          font-size: 0.9rem;
+          margin-left: 0.75rem;
+          line-height: 1.1rem;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .main-section3 {
+    min-width: 100vw;
+    padding-bottom: 2.5rem;
+    margin-top: 1rem;
+    h1 {
+      font-family: "Lora", serif;
+      font-weight: 700;
+      font-size: 2.1rem;
+      line-height: 46.08px;
+      color: rgb(139, 0, 139);
+      margin-left: 4rem;
+      &:nth-child(4) {
+        color: rgb(0, 0, 96);
+        margin-top: 1.5rem;
+      }
+    }
+    img {
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+      margin-top: 1.2rem;
+      box-shadow: 0px 5px 20px black;
+    }
+    p {
+      font-family: "Lora", serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin: 1rem 4rem;
+      &:nth-child(5) {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 footer {
@@ -24,4 +155,66 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  animation: fadeIn 1s ease;
+  @extend %keyframe-fadeIn;
+}
+
+@media only screen and (max-width: 31.875rem) {
+  main {
+    .main-section1 {
+      img {
+        height: 50vh;
+      }
+      div {
+        top: 25vh;
+        h3 {
+          font-size: 1.6rem;
+        }
+        h1 {
+          font-size: 1.8rem;
+          line-height: 40px;
+        }
+      }
+    }
+    .main-section2 {
+      padding: 2rem 2.5rem;
+      #main-section2-firstSentence {
+        font-size: 1.7rem;
+        line-height: 38px;
+      }
+      .main-section2-div1 {
+        margin-top: 1.9rem;
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .main-section3 {
+      margin-top: 0.5rem;
+      h1 {
+        font-size: 1.7rem;
+        line-height: 38px;
+        margin-left: 2.5rem;
+        &:nth-child(4) {
+          color: #d30000;
+          margin-top: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1.05rem;
+        margin: 1rem 2.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 25rem) {
+  main {
+    .main-section1 {
+      div {
+        top: 18vh;
+      }
+    }
+  }
 }

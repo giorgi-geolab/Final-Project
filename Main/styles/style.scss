@@ -14,6 +14,7 @@ main {
       min-width: 100%;
       height: 60vh;
       object-fit: cover;
+      box-shadow: 0 5px 20px black;
     }
     div {
       width: 40rem;
@@ -66,7 +67,7 @@ main {
         font-weight: 700;
         line-height: 46.08px;
       }
-      h5 {
+      p {
         font-family: "Lora", serif;
         font-weight: 400;
         font-size: 1rem;
@@ -133,7 +134,7 @@ main {
           flex-direction: column;
           justify-content: space-around;
           div {
-            color: green;
+            color: rgb(0, 196, 0);
             display: flex;
             flex-direction: row;
             gap: 0.7rem;
@@ -156,6 +157,8 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  animation: fadeIn 1s ease;
+  @extend %keyframe-fadeIn;
 }
 
 @media only screen and (max-width: 42rem) {
@@ -209,3 +212,14 @@ body {
     }
   }
 }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-0.5rem);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }

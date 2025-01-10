@@ -43,13 +43,13 @@ submitButton.addEventListener("click", () => {
     }
   });
   if (enteredPass.value !== secondTryPass.value) {
-    alert("პაროლები არ ემთხვევა ერთმანეთს");
+    alert("The passwords do not match.");
     event.preventDefault();
     secondTryPass.style.borderBottom = "0.14rem solid #cf2129";
     secondTryPass.focus();
     secondTryPass.style.color = "#cf2129";
     checked = false;
   } else if (checked) {
-    alert("წარმატებით დარეგისტრირდი");
+    alert("You have successfully registered.");
   }
 });

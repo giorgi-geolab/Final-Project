@@ -11,10 +11,13 @@
   background-color: $header-BackgroundColor;
   opacity: 0.9;
   h1 {
-    color: $headerTexts-Color;
-    font-size: 2.1rem;
-    font-family: "Yuji Mai", serif;
-    cursor: pointer;
+    a {
+      color: $headerTexts-Color;
+      font-size: 2.1rem;
+      font-family: "Yuji Mai", serif;
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
 
   nav {
@@ -179,6 +182,19 @@
 
     img {
       width: 2.5rem;
+    }
+  }
+}
+
+%keyframe-fadeIn {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
