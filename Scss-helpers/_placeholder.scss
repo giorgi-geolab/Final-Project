@@ -5,8 +5,13 @@
   height: 5.5rem;
   position: fixed;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: $header-BackgroundColor;
   opacity: 0.9;
@@ -21,11 +26,21 @@
   }
 
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 1.5rem;
     #nav-links-ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       gap: 1.5625rem;
       #active {
@@ -35,21 +50,33 @@
         }
       }
       li {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         list-style: none;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         &:hover {
           border-bottom: 0.125rem solid $header-linksHoversColor;
         }
         a {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           text-decoration: none;
           font-size: 1.2rem;
           color: $headerTexts-Color;
+          -webkit-transition: 0.2s;
+          -o-transition: 0.2s;
           transition: 0.2s;
 
           &:hover {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
             transform: scale(1.05);
             color: $header-linksHoversColor;
           }
@@ -58,13 +85,19 @@
     }
     .burger-menu-div {
       display: none;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       .fa-bars {
         font-size: 1.5rem;
         color: rgb(222, 222, 222);
         cursor: pointer;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: #ffffff;
         }
@@ -77,10 +110,14 @@
       i {
         color: $header-iconColor;
         font-size: 1.4rem;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         cursor: pointer;
 
         &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: $headerTexts-Color;
         }
@@ -93,17 +130,29 @@
   .footer-section1 {
     width: 100%;
     min-height: 17rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     background-color: #0b0d0e;
     padding: 4rem 0 4rem;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
     &-right,
     &-left {
       width: 34.625rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       div {
         width: 14rem;
@@ -143,7 +192,11 @@
           }
         }
         .footer-icons-div {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           margin-top: 1.1rem;
           padding-bottom: 0.8rem;
@@ -159,6 +212,7 @@
       width: 39.375rem;
       div:nth-child(1) {
         width: 18.75rem;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
       }
     }
@@ -166,11 +220,18 @@
   .footer-section2 {
     width: 100%;
     height: 3.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: #15181a;
     padding: 0 2.25rem;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     h1 {
       font-family: "Lora", serif;
@@ -187,13 +248,27 @@
 }
 
 %keyframe-fadeIn {
-  @keyframes fadeIn {
+  @-webkit-keyframes fadeIn {
     from {
       opacity: 0;
+      -webkit-transform: translateY(-0.5rem);
       transform: translateY(-0.5rem);
     }
     to {
       opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-0.5rem);
+      transform: translateY(-0.5rem);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0);
       transform: translateY(0);
     }
   }
@@ -203,7 +278,12 @@
   display: none;
   text-align: center;
   height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   .after--lowPXS__txt {
     color: red;
@@ -216,6 +296,8 @@
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
     transition: 0.8s;
 
     &:hover {
@@ -229,8 +311,12 @@
   @media only screen and (max-width: 60rem) {
     header {
       .burger-menu-div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         .fa-bars.active {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
           transform: rotate(180deg);
         }
       }
@@ -239,15 +325,22 @@
         left: -100%;
         top: 5.5rem;
         gap: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         background-color: $header-BackgroundColor;
         width: 100%;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         #active {
           padding-bottom: 0.5rem;
         }
         li {
           margin: 0.8rem 0;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
         &.active {
@@ -261,6 +354,7 @@
       .footer-section1 {
         &-right,
         &-left {
+          -ms-flex-pack: distribute;
           justify-content: space-around;
         }
       }
@@ -269,13 +363,20 @@
   @media only screen and (max-width: 70.938rem) {
     footer {
       .footer-section1 {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
 
         &-right,
         &-left {
           width: 100%;
           height: 100%;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           div:nth-child(2) {
             margin-top: 1.3rem;
@@ -302,7 +403,12 @@
   @media only screen and (max-width: 43.75rem) {
     footer {
       .footer-section1 {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         &-right {
           margin-top: 1.3rem;
@@ -340,6 +446,8 @@
       background-color: black;
     }
     .after--lowPXS {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }

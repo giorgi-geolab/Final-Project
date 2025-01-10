@@ -14,7 +14,9 @@ main {
       min-width: 100%;
       width: 100%;
       height: 60vh;
+      -o-object-fit: cover;
       object-fit: cover;
+      -webkit-box-shadow: 0 5px 20px black;
       box-shadow: 0 5px 20px black;
     }
     div {
@@ -22,7 +24,12 @@ main {
       position: absolute;
       top: 32vh;
       right: 5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       text-align: right;
       gap: 1.2rem;
@@ -46,6 +53,8 @@ main {
           font-weight: 700;
           font-size: 1.25rem;
           line-height: 20px;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
           transition: 0.5s;
           color: #f3f3f3;
           text-decoration: none;
@@ -60,7 +69,12 @@ main {
   }
   .main-section2 {
     padding: 2.5rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     #main-section2-firstSentence {
@@ -82,15 +96,22 @@ main {
       div {
         max-width: 30rem;
         margin-top: 0.7rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         img {
           width: 3rem;
           height: 3rem;
+          -o-object-fit: cover;
           object-fit: cover;
           border-radius: 50%;
+          -ms-flex-negative: 0;
           flex-shrink: 0;
+          -webkit-box-shadow: 0 5px 15px black;
           box-shadow: 0 5px 15px black;
         }
 
@@ -126,8 +147,10 @@ main {
     img {
       width: 100%;
       height: 40vh;
+      -o-object-fit: cover;
       object-fit: cover;
       margin-top: 1.2rem;
+      -webkit-box-shadow: 0px 5px 20px black;
       box-shadow: 0px 5px 20px black;
     }
     p {
@@ -155,6 +178,7 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
   @extend %keyframe-fadeIn;
 }

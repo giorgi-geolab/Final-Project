@@ -21,6 +21,7 @@ main {
   height: 59.563rem;
   background-repeat: no-repeat;
   background-size: cover;
+  -o-object-fit: cover;
   object-fit: cover;
   .main {
     position: absolute;
@@ -29,14 +30,24 @@ main {
     width: 30rem;
     height: 50rem;
     background-color: $register-MainBackground-Color;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-radius: 2rem;
     img {
       width: 8rem;
       height: 7rem;
+      -o-object-fit: cover;
       object-fit: cover;
     }
     form {
@@ -52,7 +63,11 @@ main {
         margin-top: 1rem;
       }
       .section-inputENP {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         background-color: $register-MainInputSection-Color;
         padding: 1rem 0 1rem 1.5rem;
@@ -96,13 +111,21 @@ main {
         }
       }
       .section--questions {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 1rem;
         padding: 0.5rem 0 0.8rem 0;
         border-bottom: 2px solid $register-borderColor;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         &--Gender {
           margin-left: 0.3rem;
@@ -119,6 +142,8 @@ main {
         }
         &--radio {
           vertical-align: bottom;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           width: 0.9rem;
           height: 0.9rem;
@@ -136,7 +161,11 @@ main {
         }
       }
       .section-inputRF {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-top: 1rem;
         input {
@@ -156,8 +185,14 @@ main {
       button {
         height: 3rem;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         border-radius: 2rem;
         margin-top: 1.3rem;
@@ -169,6 +204,8 @@ main {
         cursor: pointer;
       }
       h5 {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-top: 1.4rem;
         font-size: 1.1rem;
@@ -176,6 +213,8 @@ main {
         color: rgb(199, 199, 199);
       }
       a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-left: 0.2rem;
         font-size: 1.12rem;
@@ -191,7 +230,7 @@ footer {
   @extend %Footer-Styling;
 }
 
-.after--lowPXS{
+.after--lowPXS {
   @extend %after-LowPXS;
 }
 
@@ -199,6 +238,7 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
   @extend %keyframe-fadeIn;
 }

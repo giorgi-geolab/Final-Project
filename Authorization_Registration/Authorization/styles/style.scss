@@ -21,6 +21,7 @@ main {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  -o-object-fit: cover;
   object-fit: cover;
   .main {
     position: absolute;
@@ -29,13 +30,21 @@ main {
     width: 28rem;
     height: 35rem;
     background-color: $register-MainBackground-Color;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     border-radius: 2rem;
     img {
       width: 8rem;
       height: 7rem;
+      -o-object-fit: cover;
       object-fit: cover;
       margin-top: 1.8rem;
     }
@@ -50,7 +59,11 @@ main {
         font-family: "Yuji Mai", serif;
       }
       .section-inputEP {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         background-color: $register-MainInputSection-Color;
         padding: 1rem 0 1rem 1.5rem;
@@ -89,7 +102,11 @@ main {
         }
       }
       .section-inputRF {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-top: 1rem;
         input {
@@ -109,8 +126,14 @@ main {
       button {
         height: 3rem;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         border-radius: 2rem;
         margin-top: 1.7rem;
@@ -122,6 +145,8 @@ main {
         cursor: pointer;
       }
       h5 {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-top: 1.4rem;
         font-size: 1.1rem;
@@ -129,6 +154,8 @@ main {
         color: rgb(199, 199, 199);
       }
       a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-left: 0.2rem;
         font-size: 1.12rem;
@@ -152,6 +179,7 @@ footer {
 
 body {
   @extend %Header-Footer-media;
+  -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
   @extend %keyframe-fadeIn;
 }
